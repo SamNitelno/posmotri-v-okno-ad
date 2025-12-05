@@ -8,62 +8,33 @@ html {
     block-size: 100%;
 }
 
-h1,
-h2,
-h3,
-h4,
-p,
-ul,
-ol,
-li,
-blockquote,
-fieldset {
-    margin: 0;
-    padding: 0;
-}
-
-ul,
-ol {
-    list-style: none;
-}
-
-video {
-    width: 100%;
-}
-
-/* Utility classes */
-
-.visually-hidden {
-    position: absolute;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    inline-size: 1px;
-    block-size: 1px;
-    clip-path: inset(50%);
-    white-space: nowrap;
-}
-
 .page {
     display: flex;
     align-items: center;
+    justify-content: center;
     margin: auto;
-    color: #fff;
     font-family: 'Fira Sans Condensed', sans-serif;
-    font-size: 18px;
-    background-color: #1b1919;
-    inline-size: 1200px;
-    block-size: 100%;
+    background-color: rgba(27, 25, 25, 1);
+    width: 100%;
+    height: 100%;
 }
 
 .content {
     display: flex;
     gap: 30px;
+    align-items: flex-end;
     margin: 0 30px;
-    inline-size: 100%;
+    width: 1140px;
+    height: 534px;
+    color: white;
 }
 
 .result {
     align-self: flex-end;
+}
+
+video {
+    width: 100%;
 }
 
 .result__video-container {
@@ -72,17 +43,17 @@ video {
     margin: 0 0 11px;
 }
 
-.search-form {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
 .result__video {
     inline-size: 100%;
     block-size: 100%;
     object-fit: cover;
     object-position: center;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    gap: 40px;
 }
 
 .search-form__fieldset {
@@ -153,13 +124,6 @@ video {
     gap: 15px;
 }
 
-.search-form__pseudo-checkbox {
-    display: block;
-    border: 1px solid #FFF;
-    inline-size: 19px;
-    block-size: 19px;
-}
-
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
     content: '';
     display: block;
@@ -167,6 +131,13 @@ video {
     inline-size: 15px;
     block-size: 15px;
     margin: 1px 0 0 1px;
+}
+
+.search-form__pseudo-checkbox {
+    display: block;
+    border: 1px solid #FFF;
+    inline-size: 19px;
+    block-size: 19px;
 }
 
 .button {
@@ -180,6 +151,7 @@ video {
     background-color: transparent;
     cursor: pointer;
     inline-size: 100%;
+    height: 34px;
 }
 
 .button:active {
@@ -204,17 +176,19 @@ video {
 }
 
 .content__details {
-    inline-size: 100%;
+    width: 399px;
+    height: 534px;
+    padding: 0;
 }
 
 .title {
-    padding: 0 0 26px;
-    color: #FFF;
     font-family: Oswald, sans-serif;
     font-weight: 700;
     font-size: 75px;
-    line-height: 70.5px;
+    line-height: 94%;
     text-transform: uppercase;
+    margin-bottom: 26px;
+    margin-top: 0;
 }
 
 .content__accent {
@@ -224,8 +198,10 @@ video {
 .content__list {
     position: relative;
     overflow-y: scroll;
-    block-size: 298px;
     scrollbar-width: none;
+    width: 390px;
+    height: 298px;
+
 }
 
 .content__list::-webkit-scrollbar {
@@ -276,6 +252,10 @@ video {
     line-height: 1;
     text-transform: uppercase;
     hyphens: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 190px;
 }
 
 .content__video-card-description {
@@ -290,4 +270,85 @@ video {
     block-size: 103px;
     object-fit: cover;
     object-position: center;
+}
+
+.content__list-item .more-button {
+    display: block;
+    margin: 20px auto 0;
+    inline-size: 80%;
+    max-width: 300px;
+}
+
+.more-button {
+    position: relative;
+    top: -34px;
+    border: 1px solid #FFF;
+    padding: 6px 0;
+    color: #FFF;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    background-color: transparent;
+    cursor: pointer;
+    width: 390px;
+    height: 34px;
+}
+
+.more-button:active {
+    background-color: #545050;
+}
+
+.more-button:hover {
+    text-decoration: underline 1px #FFF;
+}
+
+.more-button:focus {
+    outline: none;
+}
+
+.more-button:focus-visible {
+    outline: 1px solid #FFF;
+    outline-offset: 1px;
+}
+
+.content__list {
+    position: relative;
+    overflow-y: scroll;
+    block-size: 298px;
+    scrollbar-width: none;
+    padding-bottom: 64px;
+}
+
+.content__list-item:last-of-type {
+    margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+blockquote,
+fieldset {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+.visually-hidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    inline-size: 1px;
+    block-size: 1px;
+    clip-path: inset(50%);
+    white-space: nowrap;
 }
