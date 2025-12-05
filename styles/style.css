@@ -198,18 +198,13 @@ video {
 .content__list {
     position: relative;
     overflow-y: scroll;
-    scrollbar-width: none;
-    width: 390px;
+    width: 394px;
     height: 298px;
-
-}
-
-.content__list::-webkit-scrollbar {
-    display: none;
 }
 
 .content__list-item:not(:last-child) {
     margin: 0 0 34px;
+    width: 390px;
 }
 
 .content__card-link {
@@ -244,7 +239,6 @@ video {
 }
 
 .content__video-card-title {
-    padding: 2px 2px 5px;
     color: #FFF;
     font-family: Oswald, sans-serif;
     font-weight: 700;
@@ -315,8 +309,7 @@ video {
 .content__list {
     position: relative;
     overflow-y: scroll;
-    block-size: 298px;
-    scrollbar-width: none;
+    scrollbar-width: thin;
     padding-bottom: 64px;
 }
 
